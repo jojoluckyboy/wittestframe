@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="670" started-at="2017-04-14T07:24:58Z" finished-at="2017-04-14T07:24:59Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="670" started-at="2017-04-14T07:24:58Z" finished-at="2017-04-14T07:24:59Z">
+      <class name="com.icinfo.witest.testcase.NewTestCase">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.icinfo.witest.testcase.NewTestCase@2a330f22]" name="beforeSuite" is-config="true" duration-ms="7" started-at="2017-04-14T15:24:58Z" finished-at="2017-04-14T15:24:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.icinfo.witest.testcase.NewTestCase@2a330f22]" name="beforeTest" is-config="true" duration-ms="0" started-at="2017-04-14T15:24:58Z" finished-at="2017-04-14T15:24:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.icinfo.witest.testcase.NewTestCase@2a330f22]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-04-14T15:24:58Z" finished-at="2017-04-14T15:24:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="LLogAdd()[pri:0, instance:com.icinfo.witest.testcase.NewTestCase@2a330f22]" name="LLogAdd" duration-ms="659" started-at="2017-04-14T15:24:58Z" finished-at="2017-04-14T15:24:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LLogAdd -->
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.icinfo.witest.testcase.NewTestCase@2a330f22]" name="AfterClass" is-config="true" duration-ms="0" started-at="2017-04-14T15:24:59Z" finished-at="2017-04-14T15:24:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterClass -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.icinfo.witest.testcase.NewTestCase@2a330f22]" name="afterTest" is-config="true" duration-ms="0" started-at="2017-04-14T15:24:59Z" finished-at="2017-04-14T15:24:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="closeClient()[pri:0, instance:com.icinfo.witest.testcase.NewTestCase@2a330f22]" name="closeClient" is-config="true" duration-ms="0" started-at="2017-04-14T15:24:59Z" finished-at="2017-04-14T15:24:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeClient -->
+      </class> <!-- com.icinfo.witest.testcase.NewTestCase -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

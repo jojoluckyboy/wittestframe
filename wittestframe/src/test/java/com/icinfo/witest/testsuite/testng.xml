@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright© 2003-2016 浙江汇信科技有限公司, All Rights Reserved. -->
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="false" preserve-order="true">
+
+	<test name="Test">
+		<classes>
+			<class name="com.icinfo.witest.testcase.NewTestCase">
+			</class>
+		</classes>
+	</test>
+
+	<listeners>
+
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+
+	</listeners>
+	<listeners> <listener class-name="com.icinfo.witest.runfaillistener.TestNGListener" 
+		/> <listener class-name="com.icinfo.witest.runfaillistener.RetryListener" /> </listeners> 
+
+</suite> 

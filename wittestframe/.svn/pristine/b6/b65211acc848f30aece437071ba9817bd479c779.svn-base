@@ -1,0 +1,169 @@
+package com.icinfo.witest.testcase;
+
+import org.testng.annotations.Test;
+
+import com.icinfo.witest.bean.ResponseBean;
+import com.icinfo.witest.httpclient.EntityUtil;
+import com.icinfo.witest.httpclient.HttpClientUtil;
+import com.icinfo.witest.httpclient.ResponseUtil;
+import com.icinfo.witest.utils.PropertiesUtil;
+import com.icinfo.witest.utils.XmlUtil;
+import com.icinfo.witest.utils.sm4EncryptDataUtil;
+
+import org.testng.annotations.BeforeClass;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.commons.httpclient.methods.PostMethod;
+import org.apache.http.Consts;
+import org.apache.http.client.CookieStore;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.AfterSuite;
+
+
+
+/** 
+* @ClassName: NewTestCase 
+* @Description: testcase demo
+* @author wang wencong
+* @date 2016年4月13日 上午10:33:49 
+*  
+*/
+public class NewTestCase {
+
+	static CookieStore cookieStore = null;
+
+	static CloseableHttpClient httpclient = null;
+	static String encode = "UTF-8";
+
+	/**
+	*
+	*@Description:testcase demo
+	*@Param:url----测试接口地址
+	*@Return:
+	*@Exception:
+	*@Author:wang wencong
+	*@Date 2017年4月14日 上午10:00:15
+	*
+	*/
+	@Test
+	public void LLogAdd() {
+
+		try {
+
+//			System.out.println(NewTestCase.class.getClassLoader().getResource("config.properties").getPath());
+			
+	         /*	获取test/resouce目录下的config文件键值	*/
+			
+			 /*	NewTestCase为当case类的名字	*/
+			String url = PropertiesUtil.getTestResourceValue(NewTestCase.class.getClassLoader().getResource("config.properties").getPath(), "url", "config.properties");
+
+//			String url = "http://115.238.48.66:1183/client/log/add1";
+
+			//String xmlPath = System.getProperty("user.dir") + "\\src\\test\\resource\\LLlogParaData\\LogAdd.xml";
+			 
+		      /*	获取test/resouce目录下的测试数据xml的值	*/
+			String xmlPath =NewTestCase.class.getResource("/LogAdd.xml").getPath();			 
+
+			List<HashMap<String, Object>> paramsMap = XmlUtil.readXMLDocument(xmlPath);
+
+			for (int i = 0, n = paramsMap.size(); i < n; i++) {
+		
+				/*
+				 * 根据testcase的特定要求，对输入参数做特定处理
+				 *
+				 */
+				EntityUtil entitys = new EntityUtil();
+				Map<String, Object> paramsMapV = new HashMap<String, Object>();
+
+				String signkey = "FAB2456A3E454F7FB7D10C78727AE944";
+	
+				// 加密签名值串
+				paramsMapV = entitys.encryptData_sign(paramsMap.get(i), "nonceStr", signkey, encode);
+
+		
+				// sm4加密
+				sm4EncryptDataUtil sm4Encry = new sm4EncryptDataUtil();
+
+				sm4Encry.setSecretKey("JeF8U9wHFOMfs2Y8");
+				String entity = sm4Encry.encryptData_ECB(entitys.to_StringJson(paramsMapV));
+
+				/*
+				 * // 相信自己的CA和所有自签名的证书 SSLContext sslcontext =
+				 * SSLContexts.custom().loadTrustMaterial(trustStore, new
+				 * TrustSelfSignedStrategy()).build(); // 只允许使用TLSv1协议
+				 * SSLConnectionSocketFactory sslsf = new
+				 * SSLConnectionSocketFactory(sslcontext, new String[] { "TLSv1"
+				 * }, null, SSLConnectionSocketFactory.
+				 * BROWSER_COMPATIBLE_HOSTNAME_VERIFIER); httpclient =
+				 * HttpClients.custom().setSSLSocketFactory(sslsf).build();
+				 */
+
+				CookieStore cookieStore = null;
+
+				CloseableHttpClient httpclient = HttpClients.custom().setDefaultCookieStore(cookieStore).build();
+
+				String headContentType = "application/json";
+
+				CloseableHttpResponse httpResponse = HttpClientUtil.doPost(url, entity, httpclient, headContentType,
+						cookieStore, Consts.UTF_8);
+				
+				ResponseBean responseBean = ResponseUtil.setResponseBean(httpResponse);
+				
+				// add Assert
+				System.out.println(responseBean);
+				Assert.assertEquals("OK", responseBean.getStatus());
+				Assert.assertEquals("200", responseBean.getStatusCode());
+				Assert.assertEquals("\""+"success"+"\"", responseBean.getBody());
+
+			}
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	@BeforeClass
+	public void beforeClass() {
+	}
+
+	@AfterClass
+	public void AfterClass() {
+		
+	}
+
+	@BeforeTest
+	public void beforeTest() {
+	}
+
+	@AfterTest
+	public void afterTest() {
+	}
+
+	@BeforeSuite
+	public void beforeSuite() {
+	}
+
+	@AfterSuite
+	public void closeClient() {
+		 if (httpclient != null){
+		try {
+			// 关闭流并释放资源
+			httpclient.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		 }
+	}
+
+}
