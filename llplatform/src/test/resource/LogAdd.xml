@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>   
+	<bean beanName="logAdd1">	 
+		<locator name="userId" value="wwc123456"></locator>
+		<locator name="mac" value="00-19-5E-D9-C3-D7"></locator>
+		<locator name="content" value="fishtest1"></locator>
+		<locator name="nonceStr" value="wwc123check1"></locator>		 	
+	</bean>
+	<bean beanName="logAdd2">	 
+		<locator name="userId" value="wwc987654"></locator>
+		<locator name="mac" value="01-19-5E-D9-C3-D7"></locator>
+		<locator name="content" value="fishtest2"></locator>
+		<locator name="nonceStr" value="wwc123check2"></locator>		 	
+	</bean>
+</map>

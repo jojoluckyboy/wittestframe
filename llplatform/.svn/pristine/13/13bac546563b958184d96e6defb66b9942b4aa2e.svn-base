@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 3, Time elapsed: 0.938 sec <<< FAILURE! - in TestSuite
+LLogAdd(com.icinfo.llplatform.testcase.LLlogAdd)  Time elapsed: 0.025 sec  <<< FAILURE!
+java.lang.AssertionError: expected [Not Found] but found [OK]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:190)
+	at org.testng.Assert.assertEquals(Assert.java:200)
+	at com.icinfo.llplatform.testcase.LLlogAdd.LLogAdd(LLlogAdd.java:126)
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>   
+	<bean beanName="usbkey1">	 
+		<locator name="ksn" value="4117010300009865"></locator>		 	
+	</bean>
+	<bean beanName="usbkey2">	 
+		<locator name="ksn" value="7117010300007533"></locator>	 	
+	</bean>
+</map>

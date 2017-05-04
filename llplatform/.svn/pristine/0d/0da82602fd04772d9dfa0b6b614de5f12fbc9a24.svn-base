@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="566" started-at="2017-04-17T03:10:30Z" finished-at="2017-04-17T03:10:31Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="566" started-at="2017-04-17T03:10:30Z" finished-at="2017-04-17T03:10:31Z">
+      <class name="com.icinfo.llplatform.testcase.LLlogAdd">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.icinfo.llplatform.testcase.LLlogAdd@64617029]" name="beforeSuite" is-config="true" duration-ms="10" started-at="2017-04-17T11:10:30Z" finished-at="2017-04-17T11:10:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.icinfo.llplatform.testcase.LLlogAdd@64617029]" name="beforeTest" is-config="true" duration-ms="0" started-at="2017-04-17T11:10:30Z" finished-at="2017-04-17T11:10:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.icinfo.llplatform.testcase.LLlogAdd@64617029]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-04-17T11:10:30Z" finished-at="2017-04-17T11:10:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="LLogAdd()[pri:0, instance:com.icinfo.llplatform.testcase.LLlogAdd@64617029]" name="LLogAdd" duration-ms="551" started-at="2017-04-17T11:10:30Z" finished-at="2017-04-17T11:10:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LLogAdd -->
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.icinfo.llplatform.testcase.LLlogAdd@64617029]" name="AfterClass" is-config="true" duration-ms="0" started-at="2017-04-17T11:10:31Z" finished-at="2017-04-17T11:10:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterClass -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.icinfo.llplatform.testcase.LLlogAdd@64617029]" name="afterTest" is-config="true" duration-ms="0" started-at="2017-04-17T11:10:31Z" finished-at="2017-04-17T11:10:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="closeClient()[pri:0, instance:com.icinfo.llplatform.testcase.LLlogAdd@64617029]" name="closeClient" is-config="true" duration-ms="1" started-at="2017-04-17T11:10:31Z" finished-at="2017-04-17T11:10:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeClient -->
+      </class> <!-- com.icinfo.llplatform.testcase.LLlogAdd -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

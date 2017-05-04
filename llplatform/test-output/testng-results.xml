@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="7983" started-at="2017-04-21T03:23:11Z" finished-at="2017-04-21T03:23:19Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="7983" started-at="2017-04-21T03:23:11Z" finished-at="2017-04-21T03:23:19Z">
+      <class name="com.icinfo.llplatform.testcase.LLpasmodifyUpdatetime">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.icinfo.llplatform.testcase.LLpasmodifyUpdatetime@af66eac]" name="beforeSuite" is-config="true" duration-ms="6" started-at="2017-04-21T11:23:11Z" finished-at="2017-04-21T11:23:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.icinfo.llplatform.testcase.LLpasmodifyUpdatetime@af66eac]" name="beforeTest" is-config="true" duration-ms="1" started-at="2017-04-21T11:23:11Z" finished-at="2017-04-21T11:23:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.icinfo.llplatform.testcase.LLpasmodifyUpdatetime@af66eac]" name="beforeClass" is-config="true" duration-ms="1" started-at="2017-04-21T11:23:11Z" finished-at="2017-04-21T11:23:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="LLogAdd()[pri:0, instance:com.icinfo.llplatform.testcase.LLpasmodifyUpdatetime@af66eac]" name="LLogAdd" duration-ms="7974" started-at="2017-04-21T11:23:11Z" finished-at="2017-04-21T11:23:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LLogAdd -->
+        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.icinfo.llplatform.testcase.LLpasmodifyUpdatetime@af66eac]" name="AfterClass" is-config="true" duration-ms="0" started-at="2017-04-21T11:23:19Z" finished-at="2017-04-21T11:23:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AfterClass -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.icinfo.llplatform.testcase.LLpasmodifyUpdatetime@af66eac]" name="afterTest" is-config="true" duration-ms="0" started-at="2017-04-21T11:23:19Z" finished-at="2017-04-21T11:23:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="closeClient()[pri:0, instance:com.icinfo.llplatform.testcase.LLpasmodifyUpdatetime@af66eac]" name="closeClient" is-config="true" duration-ms="1" started-at="2017-04-21T11:23:19Z" finished-at="2017-04-21T11:23:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeClient -->
+      </class> <!-- com.icinfo.llplatform.testcase.LLpasmodifyUpdatetime -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
